@@ -26,25 +26,14 @@ int main(){
 
     int arr1[]={3, 3, 0, 99, -40};
     int size=sizeof(arr1)/sizeof(int);
-    int min = INT_MAX;
+    int max = INT_MIN;
     for (int i = 0; i < size; i++)
     {
-        // if (arr1[i] < INT_MAX)
-        // {
-        //     min = arr1[i];
-        // }
-        for (int j = 1; j < size; j++)
+        if (arr1[i] > max)
         {
-            if (arr1[i]>arr1[j])
-            {
-                // cout<<arr1[i]<<" is the largest element in the array"<<endl;
-            }
-            cout<<arr1[i]<<" is the largest element in the array"<<endl;
+            max = arr1[i];
         }
-        // cout<<arr1[i]<<" is the largest element in the array"<<endl;
     }
-    // cout<<arr1[i]<<" is the largest element in the array"<<endl;
-    // cout<<min<<" is the largest element in the array"<<endl;
-    
+    cout<<max<<" is the largest element in the array"<<endl;
     return 0;
 }

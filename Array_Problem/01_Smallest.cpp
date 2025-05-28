@@ -27,15 +27,15 @@ int main(){
     // cout<<sortArr(arr1)<<" is the smallest element in the array"<<endl;
     // cout<<sortArr(arr2)<<" is the smallest element in the array"<<endl;
      
-    int max= INT_MIN;
+    int min= INT_MAX;
     for (int i = 0; i <n; i++)
     {
-        if (arr1[i]>INT_MIN)
+        if (arr1[i]<min)
         {
-            max = arr1[i];
+            min = arr1[i];
         }
         
     }
-    cout<<max<<" is the smallest element in the array"<<endl;
+    cout<<min<<" is the smallest element in the array"<<endl;
     return 0;
 }

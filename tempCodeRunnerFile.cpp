@@ -1,4 +1,2 @@
-  // int sortArr(vector<int>& arr){
-    //     sort(arr.begin(),arr.end());
-    //     return arr.back(               );
-    // }
+
+    // cout<<reverseArray(arr2)<<" is the reverseArray"<<endl;
