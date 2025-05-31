@@ -36,22 +36,56 @@ using namespace std;
 
 // M-2
 
-int main() {
-    int arr[] = {1, 2, 2, 3, 1, 4, 2, 3};
-    int n = sizeof(arr) / sizeof(arr[0]);
+// int main() {
+//     int arr[] = {1, 2, 2, 3, 1, 4, 2, 3};
+//     int n = sizeof(arr) / sizeof(arr[0]);
 
-    unordered_map<int, int> freq;
+//     unordered_map<int, int> freq;
 
-    // Count frequency of each element
-    for (int i = 0; i < n; i++) {
-        freq[arr[i]]++;
-    }
+//     // Count frequency of each element
+//     for (int i = 0; i < n; i++) {
+//         freq[arr[i]]++;
+//     }
 
-    // Print the frequencies
-    cout << "Element Frequencies:\n";
-    for (auto pair : freq) {
-        cout << pair.first << " -> " << pair.second << endl;
-    }
+//     // Print the frequencies
+//     cout << "Element Frequencies:\n";
+//     for (auto pair : freq) {
+//         cout << pair.first << " -> " << pair.second << endl;
+//     }
 
+//     return 0;
+// }
+
+// C++ program to check if a given
+// year is leap year or not
+#include <iostream>
+using namespace std;
+
+bool checkYear(int year)
+{
+    // leap year
+    if (year % 400 == 0)
+        return true;
+
+    // Not leap year
+    if (year % 100 == 0)
+        return false;
+
+    // leap year
+    if (year % 4 == 0)
+        return true;
+
+    // Not leap year
+    return false;
+}
+
+int main()
+{
+    int year = 2000;
+
+    if (checkYear(year))
+        cout << "Leap Year";
+    else
+        cout << "Not a Leap Year";
     return 0;
 }
