@@ -58,34 +58,65 @@ using namespace std;
 
 // C++ program to check if a given
 // year is leap year or not
+// #include <iostream>
+// using namespace std;
+
+// bool checkYear(int year)
+// {
+//     // leap year
+//     if (year % 400 == 0)
+//         return true;
+
+//     // Not leap year
+//     if (year % 100 == 0)
+//         return false;
+
+//     // leap year
+//     if (year % 4 == 0)
+//         return true;
+
+//     // Not leap year
+//     return false;
+// }
+
+// int main()
+// {
+//     int year = 2000;
+
+//     if (checkYear(year))
+//         cout << "Leap Year";
+//     else
+//         cout << "Not a Leap Year";
+//     return 0;
+// }
+
+// C++ Program to check
+// if number is Armstrong
+// or not
 #include <iostream>
 using namespace std;
 
-bool checkYear(int year)
-{
-    // leap year
-    if (year % 400 == 0)
-        return true;
-
-    // Not leap year
-    if (year % 100 == 0)
-        return false;
-
-    // leap year
-    if (year % 4 == 0)
-        return true;
-
-    // Not leap year
-    return false;
-}
-
 int main()
 {
-    int year = 2000;
+    int n = 153;
+    int temp = n;
+    int ans = 0;
 
-    if (checkYear(year))
-        cout << "Leap Year";
-    else
-        cout << "Not a Leap Year";
+    // function to calculate
+    // the sum of individual digits
+    while (n > 0) {
+
+        int rem = n % 10;
+        ans = (ans) + (rem * rem * rem);
+        n = n / 10;
+    }
+
+    // condition to check
+    if (temp == ans) {
+        cout << ("Yes, it is Armstrong Number");
+    }
+    else {
+        cout << ("No, it is not an Armstrong Number");
+    }
     return 0;
 }
