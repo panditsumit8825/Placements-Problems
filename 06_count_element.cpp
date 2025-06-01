@@ -93,30 +93,115 @@ using namespace std;
 // C++ Program to check
 // if number is Armstrong
 // or not
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-int main()
-{
-    int n = 153;
-    int temp = n;
-    int ans = 0;
+// int main()
+// {
+//     int n = 153;
+//     int temp = n;
+//     int ans = 0;
 
-    // function to calculate
-    // the sum of individual digits
-    while (n > 0) {
+//     // function to calculate
+//     // the sum of individual digits
+//     while (n > 0) {
 
-        int rem = n % 10;
-        ans = (ans) + (rem * rem * rem);
-        n = n / 10;
-    }
+//         int rem = n % 10;
+//         ans = (ans) + (rem * rem * rem);
+//         n = n / 10;
+//     }
 
-    // condition to check
-    if (temp == ans) {
-        cout << ("Yes, it is Armstrong Number");
-    }
-    else {
-        cout << ("No, it is not an Armstrong Number");
-    }
-    return 0;
-}
+//     // condition to check
+//     if (temp == ans) {
+//         cout << ("Yes, it is Armstrong Number");
+//     }
+//     else {
+//         cout << ("No, it is not an Armstrong Number");
+//     }
+//     return 0;
+// }
+
+// C Program to print hourglass pattern
+// #include <iostream>
+// using namespace std;
+
+// // function to print hourglass pattern
+// void hourglass(int rows)
+// {
+
+//     // first outer loop to iterate each row
+//     for (int i = 0; i < 2 * rows - 1; i++) {
+
+//         // assigning comparator
+//         int comp;
+//         if (i < rows) {
+//             comp = 2 * i + 1;
+//         }
+//         else {
+//             comp = 2 * (2 * rows - i) - 3;
+//         }
+
+//         // first inner loop to print leading spaces
+//         for (int j = 0; j < comp; j++) {
+//             cout << ' ';
+//         }
+
+//         // second inner loop to print star *
+//         for (int k = 0; k < 2 * rows - comp; k++) {
+//             cout << "* ";
+//         }
+//         cout << '\n';
+//     }
+// }
+
+// int main()
+// {
+//     hourglass(5);
+//     return 0;
+// }
+
+
+// C++ program to check
+// Whether a given number
+// Is palindrome or not
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// bool isPalRec(char str[], int s, int n)
+// {
+//     // If there is only one character
+//     if (s == n)
+//         return true;
+
+//     // If first and last
+//     // characters do not match
+//     if (str[s] != str[n])
+//         return false;
+
+//     if (s < n + 1)
+//         return isPalRec(str, s + 1, n - 1);
+
+//     return true;
+// }
+
+// bool isPalindrome(char str[])
+// {
+//     int n = strlen(str);
+
+//     if (n == 0)
+//         return true;
+
+//     return isPalRec(str, 0, n - 1);
+// }
+
+// int main()
+// {
+//     char str[] = "GeeKeeG";
+
+//     if (isPalindrome(str))
+//         cout << "Yes";
+//     else
+//         cout << "No";
+
+//     return 0;
+// }
